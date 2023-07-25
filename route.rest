@@ -1,0 +1,31 @@
+GET http://localhost:3000/restaurants
+
+###
+
+GET http://localhost:3000/restaurants/64bf260e3113419414688161
+
+###
+
+POST http://localhost:3000/restaurants
+Content-Type: application/json
+
+
+{
+    "name": "Burgers",
+    "address": "Korea",
+    "operationHours":"9 to 5",
+    "phoneNumber": "010"
+}
+
+###
+
+DELETE http://localhost:3000/restaurants/64bf260e3113419414688161
+
+###
+
+PATCH http://localhost:3000/restaurants/64bde6a8a3498b5a817df7f3
+Content-Type: application/json
+
+{
+    "name" : "Hot Dogs"
+}

@@ -32,11 +32,23 @@ Content-Type: application/json
 //jwt auth
 ###
 GET http://localhost:3000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWxvbnNvIiwiaWF0IjoxNjkwNjgyMzI4LCJleHAiOjE2OTA2ODIzNDN9.Dj9869S_lrdci4vhJY7VLxX2zzcTVgA9-0K_2Q4PjJE
 
 ###
-POST http://localhost:3000/login
+
+POST http://localhost:4000/token 
 Content-Type: application/json
 
 {
-    "username": "Fabian"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWxvbnNvIiwiaWF0IjoxNjkwNjgyMjY3fQ.am3L6moZ6YB2E_LQ21-Wk78N-mRWpNG0V3K8geR6p7w"
+}
+
+###
+
+
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+    "username": "Alonso"
 }

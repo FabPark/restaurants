@@ -25,15 +25,17 @@ app.get('/posts', authenticateToken, (req,res) => {
     res.json(posts.filter(post => post.username === req.user.name)) //this only returns the post that the user has access to 
 })
 
-app.post('/login', (req, res) => {
-    //Authenticate User
+//moved to authServer
+// app.post('/login', (req, res) => {
+//     //Authenticate User
 
-    const username = req.body.username
-    const user = { name: username }
+//     const username = req.body.username
+//     const user = { name: username }
     
-    const accessToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET)
-    res.json({ accessToken: accessToken})
-})
+//     const accessToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET) //this TOKEN has no expiration time 
+//     res.json({ accessToken: accessToken})
+// })
+//moved to authServer
 
 //middleware to authenticate our TOKEN
 function authenticateToken (req, res, next) {
